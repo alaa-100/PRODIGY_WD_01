@@ -69,7 +69,7 @@ a {
 }
 
 .bg {
-    background: url(../assests/home-bg.jpg) no-repeat center center;
+    background: url(./assests/home-bg.jpg) no-repeat center center;
     position: relative;
     background-size: cover;
     padding-top: 180px;
