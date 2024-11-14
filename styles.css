@@ -1,0 +1,263 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+#nav1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    color: #444444;
+    padding: 0 5em;
+}
+
+#nav2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 5em;
+    color: #6f6f6f;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.n1 {
+    width: 30em;
+}
+
+.n2 {
+    width: 18em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+.n2 a {
+    color: #aaaaaa;
+}
+
+.n2 li a:hover {
+    background-color: #3765a3;
+    color: #fff;
+}
+
+#nav2 ul {
+    margin-top: 0;
+}
+
+.logo {
+    width: 70%;
+}
+
+.callus {
+    font-size: 14px;
+}
+
+.callus i {
+    color: #1abc9c;
+}
+
+.bg {
+    background: url(../assests/home-bg.jpg) no-repeat center center;
+    position: relative;
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom: 190px;
+}
+
+.overlay {
+    background-color: rgba(41, 39, 34, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.home_text {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+    padding: 1em;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #444;
+}
+
+
+/* Responsive styles */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    #nav1, #nav2 {
+        padding: 1em 2em;
+    }
+    .n1, .n2 {
+        width: auto;
+    }
+    .bg {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    #nav1, #nav2 {
+        align-items: center;
+        justify-content: center;
+        padding: 1em 1em;
+    }
+    .n1, .n2 ,.nav{
+        text-align: center;
+    }
+    .n1{
+        margin-inline: auto;
+    }
+    .n2{
+        width: 60%;
+        margin:0.3em auto 0;
+    }
+    .nav-items{
+        display: none;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-items .nav{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .logo {
+        width: 60%;
+        order: 1;
+        text-align: center;
+        flex: 1;
+        margin :0 auto;
+    }
+    .bg {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .callus {
+        font-size: 13px;
+    }
+    .menu-icon {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #444;
+        order: 2;
+        margin-left: auto;
+    }
+    .search-icon {
+        order: 0;
+        font-size: 1.5em;
+        color: #444;
+        margin-right: auto;
+        display: block; /* Ensure the search icon is visible */
+    }
+    
+    /* Show nav items when .show class is added */
+    .nav-items.show {
+        display: flex;
+        max-height: 500px; /* Set a max-height to allow for transition */
+    }
+    .nav-items li {
+        padding: 0.5em 0;
+    }
+
+    .nav-items li a {
+        padding: 1em;
+        color: #444;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .bg {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    h1, h2, h3 {
+        font-size: 18px;
+    }
+    .home_text h1, .home_text h2, .home_text h3 {
+        padding: 0 1em;
+    }
+    .logo {
+        flex: 1;
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
+
+    .callus li ,.callus a ,.callus{
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .search-icon {
+        flex: 1;
+        order: 0;
+    }
+    .search-icon a {
+        color: #6f6f6f;
+        font-size: 1.5em;
+    }
+}
