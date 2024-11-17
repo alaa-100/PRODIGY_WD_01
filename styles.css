@@ -4,6 +4,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    overflow: hidden; 
+
 }
 
 #nav1 {
@@ -69,7 +71,7 @@ a {
 }
 
 .bg {
-    background: url(./assests/home-bg.jpg) no-repeat center center;
+    background: url(./assets/home-bg.jpg) no-repeat center center;
     position: relative;
     background-size: cover;
     padding-top: 180px;
@@ -260,4 +262,30 @@ h1 {
         color: #6f6f6f;
         font-size: 1.5em;
     }
+}
+
+
+/* Animation for home_text */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(200px); /* Adjust as needed */ 
+    }
+    75%{
+        transform: translateX(-200px); /* Adjust as needed */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.home_text {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+    padding: 1em;
+    animation: moveLeftRight 3s ease-in-out infinite;
 }
